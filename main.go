@@ -21,6 +21,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"fmt"
 
 	gitopsgen "github.com/redhat-developer/gitops-generator/pkg"
 
@@ -95,6 +96,8 @@ func main() {
 			log.Println(http.ListenAndServe("localhost:6060", nil))
 		}()
 	}
+	
+	fmt.Println("This is pretty cool!")
 	var mgr ctrl.Manager
 	var err error
 	options := ctrl.Options{
